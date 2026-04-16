@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "pixel";
+    src: url(/fonts/pixelFont-7-8x14-sproutLands.ttf);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--sky-color);
+}
+
+.sec1 {
+    height: 1116px;
+    width: 100%;
+    background-color: #99CEBC;
+}
+
+.button1 {
+    background: none;
+    border: none;
+    outline: none;
+    height: 100px;
+    width: 100px;
+}
+
+.button1 img {
+    image-rendering: pixelated;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    position: fixed;
+    right: 44px;
+    top: 30px;
+}
+
+#sec1_heading {
+    font-size: 300px;
+    font-family: "pixel";
+    position: absolute;
+    background: linear-gradient(180deg, #FFFFFF 50%, #D1F2F4 50%);
+background-clip: text;
+-webkit-background-clip: text;
+color: transparent;
+}
+
