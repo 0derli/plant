@@ -3,9 +3,47 @@
     padding: 0;
 }
 
+html, body {
+    cursor: url('/img/Triangle Mouse icon 1.png'), auto;
+}
+
+.clouds,
+#flower,
+.sec1 img[src="/img/flower2.png"],
+.sec1 img[src="/img/tree.png"],
+.sec1 img[src="/img/stone1.png"],
+.sec1 img[src="/img/stone2.png"],
+.sec1 img[src="/img/earth.png"] {
+    cursor: url('/img/Catpaw Mouse icon.png'), auto;
+}
+
+button,
+.button1,
+.sec1button,
+#mouse,
+.buttons img {
+    cursor: url('/img/Catpaw pointing Mouse icon.png'), pointer;
+}
+
+.sec1button:active,
+#mouse:active,
+.button1:active {
+    cursor: url('/img/Catpaw holding Mouse icon.png'), grabbing;
+}
+
 @font-face {
     font-family: "pixel";
     src: url(/fonts/pixelFont-7-8x14-sproutLands.ttf);
+}
+
+@font-face {
+    font-family: "chaos";
+    src: url(/fonts/CHAOS16.otf);
+}
+
+@font-face {
+    font-family: "floor";
+    src: url(/fonts/FloorTilesBigC.ttf);
 }
 
 main {
@@ -15,9 +53,12 @@ main {
 }
 
 .sec1 {
-    height: 1116px;
+    height: 1230px;
     width: 100%;
     background-color: #99CEBC;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: visible
 }
 
 .button1 {
@@ -42,15 +83,272 @@ main {
     position: fixed;
     right: 44px;
     top: 30px;
+    z-index: 3;
 }
 
-#sec1_heading {
-    font-size: 300px;
-    font-family: "pixel";
+.sec1button {
+  display: inline-block;
+  width: 669px;
+  height: 244px; 
+  background-image: url('/img/button.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  position: absolute;
+  user-select: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  top: 601px;
+  left: 600px;
+}
+
+.sec1button:active {
+  background-image: url('/img/buttonactive.png');
+  outline: none;
+}
+
+#sec1text {
+    font-family: "chaos";
+    color: #ffffff;
+    font-size: 5.3125rem;
+    width: 1140px;
+    text-align: center;
+    top: 393px;
     position: absolute;
-    background: linear-gradient(180deg, #FFFFFF 50%, #D1F2F4 50%);
-background-clip: text;
--webkit-background-clip: text;
-color: transparent;
+    left: 390px;
 }
 
+#mouse {
+    filter: contrast(0.8);
+    position: absolute;
+    top: 640px;
+    height: 400px;
+    left: 1250px;
+    transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 2;
+}
+
+#mouse:active {
+  transform: translateY(-80px);
+  outline: none;
+}
+
+.clouds {
+  position: absolute;
+  animation: floatVerticalStep 3s steps(4, end) infinite;
+}
+
+#cloud1 {
+  width: 167px;
+  position: absolute;
+  left: 182px;
+  top: 52px;
+}
+
+#cloud2 {
+  position: absolute;
+  left: 42px;
+  top: 350px;
+}
+
+#cloud3 {
+  transform: scaleX(-1);
+  position: absolute;
+  width: 275px;
+  top: 190px;
+  left: 1630px;
+}
+
+@keyframes floatVerticalStep {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-15px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  75% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+#flower {
+    position: absolute;
+    transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1); 
+    transform-origin: bottom center;
+    top: 535px;
+    left: 147px;
+}
+
+.sec1 img[src="/img/flower2.png"] {
+    position: absolute;
+    top: 867px;
+    left: 405px;
+}
+
+.sec1 img[src="/img/stone1.png"] {
+    position: absolute;
+    top: 886px;
+    left: 0;
+}
+
+.sec1 img[src="/img/stone2.png"] {
+    position: absolute;
+    top: 797px;
+    left: 1709px;
+    z-index: 2;
+}
+
+.sec1 img[src="/img/tree.png"] {
+    position: absolute;
+    top: 437px;
+    left: 1530px;
+}
+
+.sec1 img[src="/img/Planty.png"] {
+    position: absolute;
+    top: 73px;
+    left: 454px;
+}
+
+.sec1 img[src="/img/earth.png"] {
+    position: absolute;
+    top: 940px;
+}
+
+.sec2 {
+    height: auto;
+    min-height: 750px;
+    width: 100%;
+    background-color: #99CEBC;
+    overflow-x: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+#cloud4 {
+    position: relative;
+    top: 110px;
+    left: -60px;
+    width: 300px;
+    
+}
+
+#cloud5 {
+    position: relative;
+    transform: scaleX(-1);
+    top: 400px;
+    left: -380px;
+    width: 220px;
+}
+
+#cloud6 {
+    position: relative;
+    top: 75px;
+    left: 1100px;
+    width: 220px;
+    
+}
+
+#cloud7 {
+    position: relative;
+    top: 390px;
+    left: 900px;
+    width: 300px;
+}
+
+#sec2title {
+    position: relative;
+    top: -120px;
+    left: 375px;
+}
+
+.plants {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.3s ease;
+}
+
+.slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 60px 40px;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    height: 900px;
+    top: -100px;
+}
+
+.sliderContainer {
+    overflow: hidden;
+    width: 1600px;  
+    max-width: calc(100% - 120px);  
+    margin: 0 auto;
+    height: 800px;
+    align-items: center;
+}
+
+.plants {
+    display: flex;
+    gap: 40px;
+    transition: transform 0.5s ease;
+    align-items: center;
+    height: 600px;
+}
+
+.plant-item {
+    flex-shrink: 0;
+    width: 450px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    border-radius: 20px;
+    height: 400px;
+    overflow: visible;
+}
+
+.plant-item img {
+    width: 100%;
+    height: auto;
+    max-height: 800px;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.plant-item.active {
+    transform: scale(1.5);
+    z-index: 10;
+}
+
+.sliderButtons {
+   border: none;
+   background: none;
+}
+
+#plantName {
+    position: absolute;
+    top: 730px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 75px;
+    text-align: center;
+    font-family: "floor";
+    z-index: 15;
+    color: #3A6C74;
+    width: 1200px;
+}
