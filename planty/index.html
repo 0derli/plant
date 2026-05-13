@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planty</title>
     <link rel="stylesheet" href="1.css">
 </head>
+
 <body>
     <main>
         <section class="sec1">
             <div class="buttons">
-                <button class="button1"><img src="/img/home.png"></button>
-                <button class="button1"><img src="/img/description.png"></button>
+                <button class="button1"><img src="/img/home.png"><a href="/index.html"></a></button>
+                <button class="button1" id="openDesc"><img src="/img/description.png"></button>
                 <button class="button1"><img src="img/setting.png"></button>
+            </div>
+            <div class="modal" id="modalDesc">
+                <div class="modalContent">
+                    <span class="close"><img src="/img/close.png"></span>
+                    <p id="modalText">Добро пожаловать в Planty - уютный уголок для тех, кто хочет дружить с растениями. Мы сделали
+                        уход игрой: добавляй зелёных друзей, отмечай полив и смотри, как растёт ваша дружба. Начинающим
+                        поможем выбрать первое растение, опытным - не забыть полить. А в статьях расскажем, как лечить и
+                        растить без паники.</p>
+                </div>
             </div>
             <img src="/img/Planty.png">
             <p id="sec1text">Твой личный помощник в мире растений</p>
@@ -27,7 +38,7 @@
             <img src="/img/stone1.png">
             <img src="/img/stone2.png">
             <img src="/img/tree.png">
-        </section>     
+        </section>
         <section class="sec2">
             <img class="clouds" id="cloud4" src="/img/cloud.png">
             <img class="clouds" id="cloud5" src="/img/cloud.png">
@@ -50,9 +61,78 @@
             </div>
         </section>
         <section class="sec3">
-            <img src="/img/gif.gif">
+            <img id="gif" src="/img/gif.gif">
+            <p id="sec3text">Отмечай уход. Расти дружбу. Planty поможет.</p>
+        </section>
+        <section class="sec4">
+            <img src="/img/grass.png" style="position: absolute;">
+            <p id="sec4text1">Читайте полезные статьи</p>
+            <p id="sec4text2">Как ухаживать, лечить и растить зелёных друзей</p>
+            <button class="sec4button">
+                <p style="font-family: 'chaos'; color: #B67A4E; font-size: 4.5rem;">Перейти в блог</p>
+            </button>
+        </section>
+        <section class="sec5">
+            <img src="/img/sec5title.png" style="position: relative; top: 15px; left: 420px;">
+            <button class="sliderButtons" id="prev">
+                <img src="/img/left.png">
+            </button>
+            <button class="sliderButtons" id="next">
+                <img src="/img/right.png">
+            </button>
+            <div class="seasonContent" id="winterContent">
+                <img src="/img/winterTitle.png" class="sec5seson">
+                <img class="clouds" src="/img/cloud.png" id="cloud8">
+                <img class="clouds" src="/img/cloud.png" id="cloud9">
+                <img class="clouds" src="/img/cloud.png" id="cloud10">
+                <img class="clouds" src="/img/cloud.png" id="cloud11">
+
+                <img src="/img/winterPlant1.png" class="sec5Plants" id="plant1">
+                <img src="/img/winterPlant2.png" class="sec5Plants" id="plant2">
+                <img src="/img/winterPlant3.png" class="sec5Plants" id="plant3">
+            </div>
+            <div class="seasonContent" id="springContent">
+                <img src="/img/springTitle.png" class="sec5seson">
+                <img class="clouds" src="/img/cloud.png" id="cloud8">
+                <img class="clouds" src="/img/cloud.png" id="cloud9">
+                <img class="clouds" src="/img/cloud.png" id="cloud10">
+                <img class="clouds" src="/img/cloud.png" id="cloud11">
+
+                <img src="/img/springPlant1.png" class="sec5Plants" id="plant1">
+                <img src="/img/springPlant2.png" class="sec5Plants" id="plant2">
+                <img src="/img/springPlant3.png" class="sec5Plants" id="plant3">
+            </div>
+            <div class="seasonContent" id="summerContent">
+                <img src="/img/summerTitle.png" class="sec5seson">
+                <img class="clouds" src="/img/cloud.png" id="cloud8">
+                <img class="clouds" src="/img/cloud.png" id="cloud9">
+                <img class="clouds" src="/img/cloud.png" id="cloud10">
+                <img class="clouds" src="/img/cloud.png" id="cloud11">
+
+                <img src="/img/summerPlant1.png" class="sec5Plants" id="plant1">
+                <img src="/img/summerPlant2.png" class="sec5Plants" id="plant2">
+                <img src="/img/summerPlant3.png" class="sec5Plants" id="plant3">
+            </div>
+            <div class="seasonContent" id="autumnContent">
+                <img src="/img/autumnTitle.png" class="sec5seson">
+                <img class="clouds" src="/img/cloud.png" id="cloud8">
+                <img class="clouds" src="/img/cloud.png" id="cloud9">
+                <img class="clouds" src="/img/cloud.png" id="cloud10">
+                <img class="clouds" src="/img/cloud.png" id="cloud11">
+
+                <img src="/img/autumnPlant1.png" class="sec5Plants" id="plant1">
+                <img src="/img/autumnPlant2.png" class="sec5Plants" id="plant2">
+                <img src="/img/autumnPlant3.png" class="sec5Plants" id="plant3">
+            </div>
         </section>
     </main>
+    <footer>
+
+    </footer>
     <script src="script.js"></script>
+    <script src="slider.js"></script>
+    <script src="slider2.js"></script>
+    <script src="modal.js"></script>
 </body>
+
 </html>
